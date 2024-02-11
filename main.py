@@ -7,6 +7,8 @@ from sqlalchemy.orm import Session
 # import sqlite3
 import uvicorn
 
+# python -m virtualenv venv
+
 app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
 
