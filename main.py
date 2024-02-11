@@ -4,7 +4,7 @@ from db.engine import sesion_local, engine
 from fastapi import FastAPI, Depends
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-# import sqlite3
+import sqlite3
 import uvicorn
 
 # python -m virtualenv venv
@@ -12,7 +12,7 @@ import uvicorn
 app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
 
-# conect = sqlite3.connect('up.db')
+conect = sqlite3.connect('library.db')
 
 def get_db():
     db = sesion_local()
